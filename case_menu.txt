@@ -1,5 +1,11 @@
 string food;
 
+Console.WriteLine("Which do you like?");
+Console.WriteLine("* Type \"random\" for random recommendation");
+food =Console.ReadLine();
+
+if(food == "random")
+{
 Random random = new Random ();
 int i = random.Next (0,8); // 0 <= i <8
 //Console.WriteLine(i);
@@ -31,3 +37,35 @@ switch (i)
   		 break;
             }      
 Console.WriteLine ("Random recommendation:"+ food + ".");
+}
+
+switch(food)
+{
+	case "nasi lemak":
+        	Console.WriteLine("it cost u NT 400");
+  		break;	
+	case "sushi":
+        	Console.WriteLine("it cost u NT 300");
+  		break;	
+  	case "chicken":
+        	Console.WriteLine("it cost u NT 250");
+  		break;
+	case "ramen":
+        	Console.WriteLine("it cost u NT 200");
+        	break;
+  	case "burger":
+        	Console.WriteLine("it cost u NT 200");
+  		break;
+	case "spaghetti":
+        	Console.WriteLine("it cost u NT 180");
+        	break;
+	case "ice cream":
+        	Console.WriteLine("it cost u NT 100");
+  		break;
+	case "salad":
+        	Console.WriteLine("it cost u NT 60");
+        	break;
+	default:
+        	Console.WriteLine("sorry, we dont sell " + food + ".");
+        	break;
+}
