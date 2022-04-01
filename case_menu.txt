@@ -1,0 +1,20 @@
+string food;
+
+Random random = new Random ();
+int i = random.Next (0,3); // 0 <= i <3
+//Console.WriteLine(i);
+switch (i)
+            {
+            case 0:
+                    food = "ramen";
+                    break;
+            case 1:
+                    food = "spaghetti";
+                    break;
+            case 2:
+                    food = "salad";
+                    break;
+
+            }      
+      
+Console.WriteLine ("Random recommendation:"+ food + ".");
